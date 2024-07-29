@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo", sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+
+
+/*TEXT AREA*/
+.textArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 5px;
+}
+
+h1 {
+    font-family: "Baskervville SC", sans-serif;
+    color: brown;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*INPUT AREA*/
+.inputArea {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 5px;
+    font-weight: 400;
+    text-indent: 10px;
+}
+
+select {
+    height: 45px;
+    background-color: white;
+}
+
+.addBookButton {
+    max-width: 50vh;
+    width: 25vh;
+    min-width: 20vh;
+}
+
+.addBookButton {
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  cursor: pointer;
+  color: #111827;
+  background-color: wheat;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s;
+}
+
+.addBookButton:hover {
+  background-color: rgb(247, 231, 203);
+}
+
+.addBookButton:active {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+
+
+/*BOOKS*/
+.bookBlock {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 25px;
+    gap: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.interectButton {
+    width: 95px;
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.interectButton:hover {
+    background-color: rgb(211, 211, 211);
+    transition: 0.2s;
+}
+
+#deleteButton {
+    color: white;
+    background-color: rgb(207, 77, 77);
+}
+
+
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 650px) {
+    * {
+        transition: 0.5s;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+
+    .inputArea {
+        flex-direction: column;
+    }
+
+    .bookBlock, button {
+        font-size: 15px;
+    }
+}
