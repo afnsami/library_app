@@ -7,7 +7,57 @@
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
 </head>
-<body>
+
+<body id="body">
+    <div class="main">
+
+        <div class="textArea">
+            <h1>My Book Library</h1>
+            <p>These are the books I have loved reading.</p>
+        </div>
+        
+        <!--FORM-->
+        <form id="form" action="" method="" onsubmit="addBookCall()">
+            <div class="inputArea">
+                <!--TITLE-->
+                <input type="text"
+                        name="title"
+                        class="input" 
+                        id="title"
+                        minlength="2"
+                        placeholder="Title" 
+                        required>
+                <!--AUTHOR-->
+                <input type="text" 
+                        name="author"
+                        class="input" 
+                        id="author"
+                        placeholder="Author" 
+                        required>
+                <!--hasREAD-->
+                <select name="hasRead" class="input" id="hasRead">
+                    <option>Read</option>
+                    <option>Not read</option>
+                </select>
+            </div>
     
+            <button class="addBookButton" type="submit">Add book</button>
+    
+        </form>
+
+        <!--BOOKS-->
+        <div class="bookInfo">
+            
+            <div class="bookBlock">
+                <p>The Alchemist</p>
+                <p>Paulo Coelho</p>
+                <button class="interectButton">Read</button>
+                <button class="interectButton" id="deleteButton">Delete</button>
+            </div>
+
+        </div>
+
+    </div>
 </body>
+
 </html>
