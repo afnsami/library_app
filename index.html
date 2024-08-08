@@ -17,7 +17,7 @@
         </div>
         
         <!--FORM-->
-        <form id="form" action="" method="" onsubmit="addBookCall()">
+        <form id="form" action="" method="">
             <div class="inputArea">
                 <!--TITLE-->
                 <input type="text"
@@ -26,6 +26,7 @@
                         id="title"
                         minlength="2"
                         placeholder="Title" 
+                        autocomplete="off"
                         required>
                 <!--AUTHOR-->
                 <input type="text" 
@@ -33,6 +34,7 @@
                         class="input" 
                         id="author"
                         placeholder="Author" 
+                        autocomplete="off"
                         required>
                 <!--hasREAD-->
                 <select name="hasRead" class="input" id="hasRead">
@@ -41,14 +43,13 @@
                 </select>
             </div>
     
-            <button class="addBookButton" type="submit">Add book</button>
-    
+            <button type="submit" value="submit" id="addBookButton">Add book</button>    
         </form>
 
         <!--BOOKS-->
-        <div class="bookInfo">
+        <div id="booksContainer">
             
-            <div class="bookBlock">
+            <div class="bookCard">
                 <p>The Alchemist</p>
                 <p>Paulo Coelho</p>
                 <button class="interectButton">Read</button>
@@ -59,5 +60,4 @@
 
     </div>
 </body>
-
 </html>
