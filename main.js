@@ -20,9 +20,9 @@ function Book(title, author, hasRead) {
 
 //adds book to the library
 function addBookToLibrary(title, author, hasRead) {
-    for (i = 0; i < 10; i++) {
-        bookLibrary['obj' + i] = new Book(title, author, hasRead);
-    }
+    const obj = new Book(title, author, hasRead);
+    obj.id = "first";
+    bookLibrary.push(obj);
 }
 
 
@@ -55,7 +55,8 @@ addBookButton.addEventListener('click', function(event) {
 
 
 
-
     booksContainer.appendChild(newBook);
     event.preventDefault();
+    titleInput.value = '';
+    authorInput.value = '';
 });
