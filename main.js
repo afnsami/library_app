@@ -5,8 +5,6 @@ const hasRead = document.getElementById("hasRead");
 const addBookButton = document.getElementById("addBookButton");
 const booksContainer = document.getElementById("booksContainer");
 
-
-
 //MAIN PROGRAM
 const bookLibrary = [];
 
@@ -16,8 +14,6 @@ function Book(title, author, hasRead) {
     this.hasRead = hasRead;
 }
 
-
-
 //adds book to the library
 function addBookToLibrary(title, author, hasRead) {
     const obj = new Book(title, author, hasRead);
@@ -26,37 +22,41 @@ function addBookToLibrary(title, author, hasRead) {
 }
 
 
+
 //ADDS BOOK TO LIBRARY
 addBookButton.addEventListener('click', function(event) {
-    addBookToLibrary(titleInput.value, authorInput.value, hasRead.value);
 
-    const newBook = document.createElement('div');
-    newBook.className = "bookCard";
+    //IF INPUTS ARE NOT EMPTY
+    if (!titleInput.value == '' && !authorInput.value == '') {
+        addBookToLibrary(titleInput.value, authorInput.value, hasRead.value);
+
+        const newBook = document.createElement('div');
+        newBook.className = "bookCard";
+        
+        //TITLE
+        const titlePara = document.createElement('p');
+        titlePara.textContent = titleInput.value;
+        newBook.append(titlePara);
+        //AUTHOR
+        const authorPara = document.createElement('p');
+        authorPara.textContent = authorInput.value;
+        newBook.append(authorPara);
+        //hasREAD
+        const hasReadButton = document.createElement("button");
+        hasReadButton.textContent = hasRead.value;
+        hasReadButton.className = "interectButton";
+        newBook.append(hasReadButton);
+        //DELETE
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.id = "deleteButton";
+        deleteButton.className = "interectButton";
+        newBook.append(deleteButton);    
     
-    //TITLE
-    const titlePara = document.createElement('p');
-    titlePara.textContent = titleInput.value;
-    newBook.append(titlePara);
-    //AUTHOR
-    const authorPara = document.createElement('p');
-    authorPara.textContent = authorInput.value;
-    newBook.append(authorPara);
-    //hasREAD
-    const hasReadButton = document.createElement("button");
-    hasReadButton.textContent = hasRead.value;
-    hasReadButton.className = "interectButton";
-    newBook.append(hasReadButton);
-    //DELETE
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
-    deleteButton.id = "deleteButton";
-    deleteButton.className = "interectButton";
-    newBook.append(deleteButton);
-
-
-
-    booksContainer.appendChild(newBook);
-    event.preventDefault();
-    titleInput.value = '';
-    authorInput.value = '';
+        booksContainer.appendChild(newBook);
+        //event.preventDefault();
+        titleInput.value = '';
+        authorInput.value = '';
+    } else {
+    }
 });
