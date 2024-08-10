@@ -91,11 +91,11 @@ select {
     transition: 0.2s;
 }
 
-.addBookButton:hover {
+#addBookButton:hover {
   background-color: rgb(247, 231, 203);
 }
 
-.addBookButton:active {
+#addBookButton:active {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
