@@ -174,5 +174,7 @@ select {
         font-size: 12px;
     }
 
-
+    #booksContainer button {
+        width: 50px;
+    }
 }
