@@ -8,6 +8,8 @@ const booksContainer = document.getElementById("booksContainer");
 
 const deleteButton = document.getElementById("deleteButton");
 
+
+
 //MAIN PROGRAM
 const bookLibrary = [];
 
@@ -15,14 +17,13 @@ function Book(title, author, hasRead) {
     this.title = title;
     this.author = author;
     this.hasRead = hasRead;
-}
+};
 
-//adds book to the library
+//adds book to the bookLibrary[]
 function addBookToLibrary(title, author, hasRead) {
-    const obj = new Book(title, author, hasRead);
-    obj.id = "first";
-    bookLibrary.push(obj);
-}
+    const newBook = new Book(title, author, hasRead);
+    bookLibrary.push(newBook);
+};
 
 
 
