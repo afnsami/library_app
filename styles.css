@@ -125,7 +125,7 @@ select {
     font-weight: 300;
 }
 
-.cardButtonsDiv, .bookDetailsDiv {
+.bookButtonsDiv, .bookDetailsDiv {
     display: flex;
     flex-direction: row;
     gap: 25px;
