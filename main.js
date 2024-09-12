@@ -74,7 +74,7 @@ addBookButton.addEventListener('click', function(event) {
         bookButtonsDiv.append(deleteButton);
 
         //GOES THROUGH THE LOOP
-        bookLibrary.forEach((index) => {
+        bookLibrary.forEach(() => {
             newBook.appendChild(bookDetailsDiv);
             newBook.appendChild(bookButtonsDiv);
             booksContainer.appendChild(newBook);
@@ -84,3 +84,7 @@ addBookButton.addEventListener('click', function(event) {
         });
     }
 });
+
+function deleteBook() {
+    booksContainer.firstElementChild.remove();
+}
