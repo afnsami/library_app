@@ -25,12 +25,11 @@ function addBookToLibrary(title, author, hasRead) {
     bookLibrary.push(newBook);
 };
 
-
+addBookToLibrary("Adventures", "Charles", "Read");
 
 //ADDS BOOK TO LIBRARY
 addBookButton.addEventListener('click', function(event) {
     if (!titleInput.value == '' && !authorInput.value == '') {
-
         addBookToLibrary(titleInput.value, authorInput.value, hasRead.value);
 
         const newBook = document.createElement('div');
@@ -70,6 +69,14 @@ addBookButton.addEventListener('click', function(event) {
             deleteThis.remove();
         }
 
+        hasReadButton.onclick = function() {
+            if (hasReadButton.textContent == "Read") {
+                hasReadButton.textContent = "Not read";
+            } else {
+                hasReadButton.textContent = "Read";
+            }
+        }
+
         bookButtonsDiv.append(hasReadButton);
         bookButtonsDiv.append(deleteButton);
 
@@ -88,3 +95,13 @@ addBookButton.addEventListener('click', function(event) {
 function deleteBook() {
     booksContainer.firstElementChild.remove();
 }
+
+function changeRead() {
+    const hasReadButton = document.getElementById("hasReadButton");
+
+    if (hasReadButton.textContent == "Read") {
+        hasReadButton.textContent = "Not read";
+    } else {
+        hasReadButton.textContent = "Read";
+    }
+};
