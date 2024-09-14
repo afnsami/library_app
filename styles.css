@@ -32,13 +32,6 @@ body {
 
 
 /*TEXT AREA*/
-.textArea {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    gap: 5px;
-}
-
 .textArea p {
     font-size: 18px;
 }
@@ -48,14 +41,13 @@ h1 {
     color: brown;
 }
 
-
+/*FORM*/
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/*INPUT AREA*/
 .inputArea {
     width: 100%;
     display: flex;
@@ -83,9 +75,7 @@ select {
     border: 0;
     border-radius: .5rem;
     box-sizing: border-box;
-    font-size: .875rem;
-    font-weight: 600;
-    line-height: 1.25rem;
+    font-size: 1rem;
     padding: .75rem 1rem;
     cursor: pointer;
     color: #111827;
