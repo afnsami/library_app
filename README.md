@@ -1,5 +1,5 @@
 # Library App
-## Live Preview <a href="https://afnsami.github.io/library-app">HERE</a>
+## Live Preview <a href="https://afnsami.github.io/library_app">HERE</a>
 
 <img src="images/preview.png">
 
