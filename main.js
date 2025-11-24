@@ -34,6 +34,7 @@ addBookButton.addEventListener('click', function(event) {
 
         const newBook = document.createElement('div');
         newBook.className = "bookCard";
+        newBook.id = crypto.randomUUID();
 
         //BOOK DETAILS DIV
         const bookDetailsDiv = document.createElement('div');
@@ -65,8 +66,7 @@ addBookButton.addEventListener('click', function(event) {
         deleteButton.className = "interectButton deleteButton";
 
         deleteButton.onclick = function() {
-            const deleteThis = deleteButton.parentElement.parentElement;
-            deleteThis.remove();
+            deleteButton.parentElement.parentElement.remove();
         }
 
         hasReadButton.onclick = function() {
