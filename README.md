@@ -8,6 +8,6 @@
 
 Also when to delete the book div when user clicks delete button in the bookCard.</p>
 
-<p>It took me around<b>2 months</b>. It is longer than usual. Mainly because I was busy with other things in life.</p>
+<p>It took me around<b> 2 months</b>. It is longer than usual. Mainly because I was busy with other things in life.</p>
 
 <p>I am glad I finished it. I have to learn more and with more seriousness.</p>
